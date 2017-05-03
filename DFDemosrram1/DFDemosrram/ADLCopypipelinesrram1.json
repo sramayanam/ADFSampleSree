@@ -1,0 +1,46 @@
+{
+  "name": "ADLCopypipelinesrram1",
+  "properties": {
+    "description": "pipeline for copy activity",
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "AzureDataLakeStoreSource"
+          },
+          "sink": {
+            "type": "BlobSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "AzureDataLakeStoreInput"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "AzureBlobOutput"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1
+        },
+        "scheduler": {
+          "frequency": "Hour",
+          "interval": 1
+        },
+        "name": "AzureDakeLaketoBlob",
+        "description": "copy activity"
+      }
+    ],
+    "start": "2016-06-01T20:00:00Z",
+    "end": "2016-06-01T21:00:00Z",
+    "isPaused": false,
+    "pipelineMode": "Scheduled"
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/internalschemas/2015-09-01/Microsoft.DataFactory.pipeline.json"
+}

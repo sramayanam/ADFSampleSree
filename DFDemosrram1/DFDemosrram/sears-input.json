@@ -1,0 +1,161 @@
+{
+  "name": "sears-input",
+  "properties": {
+    "structure": [
+      {
+        "name": "SHIPPER",
+        "type": "String"
+      },
+      {
+        "name": "SHIPPER_ADDRESS",
+        "type": "String"
+      },
+      {
+        "name": "CONSIGNEE",
+        "type": "String"
+      },
+      {
+        "name": "CONSIGNEE_ADDRESS",
+        "type": "String"
+      },
+      {
+        "name": "ZIPCODE",
+        "type": "String"
+      },
+      {
+        "name": "NOTIFY",
+        "type": "String"
+      },
+      {
+        "name": "NOTIFY_ADDRESS",
+        "type": "String"
+      },
+      {
+        "name": "BILL_OF_LADING",
+        "type": "String"
+      },
+      {
+        "name": "ARRIVAL_DATE",
+        "type": "String"
+      },
+      {
+        "name": "WEIGHT_LB",
+        "type": "String"
+      },
+      {
+        "name": "WEIGHT_KG",
+        "type": "String"
+      },
+      {
+        "name": "FOREIGN_PORT",
+        "type": "String"
+      },
+      {
+        "name": "US_PORT",
+        "type": "String"
+      },
+      {
+        "name": "QUANTITY",
+        "type": "String"
+      },
+      {
+        "name": "QUNIT",
+        "type": "String"
+      },
+      {
+        "name": "MEASUREMENT",
+        "type": "String"
+      },
+      {
+        "name": "MUNIT",
+        "type": "String"
+      },
+      {
+        "name": "SHIP_REGISTERED_IN",
+        "type": "String"
+      },
+      {
+        "name": "VESSEL_NAME",
+        "type": "String"
+      },
+      {
+        "name": "CONTAINER_NUMBER",
+        "type": "String"
+      },
+      {
+        "name": "CONTAINER_COUNT",
+        "type": "String"
+      },
+      {
+        "name": "PRODUCT_DETAILS",
+        "type": "String"
+      },
+      {
+        "name": "MARKS_AND_NUMBERS",
+        "type": "String"
+      },
+      {
+        "name": "COUNTRY_OF_ORIGIN",
+        "type": "String"
+      },
+      {
+        "name": "DISTRIBUTION_PORT",
+        "type": "String"
+      },
+      {
+        "name": "HOUSE_vs_MASTER",
+        "type": "String"
+      },
+      {
+        "name": "MASTER_BL",
+        "type": "String"
+      },
+      {
+        "name": "CARRIER_CODE",
+        "type": "String"
+      },
+      {
+        "name": "CARRIER_NAME",
+        "type": "String"
+      },
+      {
+        "name": "CARRIER_ADDRESS",
+        "type": "String"
+      },
+      {
+        "name": "CARRIER_CITY",
+        "type": "String"
+      },
+      {
+        "name": "CARRIER_STATE",
+        "type": "String"
+      },
+      {
+        "name": "CARRIER_ZIP",
+        "type": "String"
+      },
+      {
+        "name": "PLACE_OF_RECEIPT",
+        "type": "String"
+      }
+    ],
+    "published": false,
+    "type": "AzureBlob",
+    "linkedServiceName": "StorageLinkedServiceinput",
+    "typeProperties": {
+      "folderPath": "spoc/",
+      "format": {
+        "type": "TextFormat",
+        "rowDelimiter": "\n",
+        "columnDelimiter": "\t"
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/internalschemas/2015-09-01/Microsoft.DataFactory.table.json"
+}

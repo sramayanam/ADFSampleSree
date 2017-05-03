@@ -1,0 +1,33 @@
+{
+  "name": "ref-data",
+  "properties": {
+    "structure": [
+      {
+        "name": "Ticker",
+        "type": "String"
+      },
+      {
+        "name": "Name",
+        "type": "String"
+      }
+    ],
+    "published": false,
+    "type": "AzureBlob",
+    "linkedServiceName": "StorageLinkedServiceinput",
+    "typeProperties": {
+      "folderPath": "refdata/",
+      "format": {
+        "type": "TextFormat",
+        "rowDelimiter": "\n",
+        "columnDelimiter": ","
+      }
+    },
+    "availability": {
+      "frequency": "Month",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/internalschemas/2015-09-01/Microsoft.DataFactory.table.json"
+}

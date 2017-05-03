@@ -1,0 +1,16 @@
+{
+  "name": "AzureDataLakeStoreLinkedServiceSP",
+  "properties": {
+    "description": "",
+    "type": "AzureDataLakeStore",
+    "typeProperties": {
+      "dataLakeStoreUri": "adl://srramtest.azuredatalakestore.net",
+      "accountName": "My Data Lake Store Account - srramtest",
+      "authorization": "**********",
+      "sessionId": "**********",
+      "subscriptionId": "893395a4-65a3-4525-99ea-2378c6e0dbed",
+      "resourceGroupName": "srramstorage"
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/internalschemas/2015-09-01/Microsoft.DataFactory.linkedservice.json"
+}
